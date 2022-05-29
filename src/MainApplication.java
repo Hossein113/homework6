@@ -6,6 +6,27 @@ public class MainApplication {
 
     public static void main(String[] args) {
 
+        System.out.println("0k");
+        List<Integer> originalList = createArrayList();
+        printlist(originalList);
+
+        List<Integer> copyArrayList = new ArrayList<>(originalList);
+        List<Integer> exeptArrayList = exeptListFinal(copyArrayList);
+        printlist(exeptArrayList);
+
+        //METHOD(1)
+        List<Integer> copy = new ArrayList<>(originalList);
+        List<Integer> exeptLisCopy = exeptListFinal(copy);
+        printlist(exeptLisCopy);
+
+        //METHOD(2)
+//        List<Integer> removeListOrgin = new ArrayList<>(originalList);
+//        List<Integer> byRemove = removelistFinal(removeListOrgin);
+//        System.out.println("last-------------------");
+//        printlist(originalList);
+//        printlist(byRemove);
+
+
     }
 
     private static List<Integer> createArrayList() {
