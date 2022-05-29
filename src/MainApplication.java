@@ -33,6 +33,19 @@ public class MainApplication {
         return list;
 
     }
+    public static void printlist(List<Integer> list) {
 
 
+        for (Integer i : list) {
+            System.out.print(" " + i + " , ");
+        }
+
+        System.out.println();
+        System.out.println(" ____________________________ ");
+
+
+    }
 }
+
+
+
