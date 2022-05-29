@@ -1,3 +1,5 @@
+import com.homework.jdbc.example.util.Linkedlist;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -5,6 +7,8 @@ public class MainApplication {
 
 
     public static void main(String[] args) {
+
+        Linkedlist linkedlist = new Linkedlist();
 
         System.out.println("0k");
         List<Integer> originalList = createArrayList();
@@ -25,7 +29,6 @@ public class MainApplication {
 //        System.out.println("last-------------------");
 //        printlist(originalList);
 //        printlist(byRemove);
-
 
     }
 
