@@ -46,6 +46,23 @@ public class MainApplication {
         }
         return listFinal;
     }
+    public static List<Integer> removelistFinal(List<Integer> list) {
+
+        for (int i = 0; i < list.size(); i += 2) {
+
+            if ((list.get(i)) > (list.get(i + 1))) {
+
+                list.remove(i);
+                list.remove(i);
+                i -= 2;
+
+            }
+
+
+        }
+        return list;
+    }
+
 
     public static void printlist(List<Integer> list) {
 
