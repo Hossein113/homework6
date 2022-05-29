@@ -54,6 +54,8 @@ public class MainApplication {
         return list;
 
     }
+
+    //METHOD(1)
     public static List<Integer> exeptListFinal(List<Integer> List) {
 
         List<Integer> listFinal = new ArrayList<>();
@@ -67,6 +69,9 @@ public class MainApplication {
         }
         return listFinal;
     }
+
+    //METHOD(2)
+
     public static List<Integer> removelistFinal(List<Integer> list) {
 
         for (int i = 0; i < list.size(); i += 2) {
