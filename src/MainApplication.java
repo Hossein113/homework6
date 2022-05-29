@@ -33,6 +33,20 @@ public class MainApplication {
         return list;
 
     }
+    public static List<Integer> exeptListFinal(List<Integer> List) {
+
+        List<Integer> listFinal = new ArrayList<>();
+        for (int i = 0; i < List.size(); i += 2) {
+
+            if (List.get(i) <= List.get(i + 1)) {
+                listFinal.add(List.get(i));
+                listFinal.add(List.get(i + 1));
+
+            }
+        }
+        return listFinal;
+    }
+
     public static void printlist(List<Integer> list) {
 
 
