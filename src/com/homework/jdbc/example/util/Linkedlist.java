@@ -43,5 +43,50 @@ public class Linkedlist<E> {
         return true;
     }
 
-}
+    public boolean remove(int index) {
+        if (size != 0) {
+            if (size / 2 >= index) {
+                int firstCount = 0;
+                Node<E> curentNode = first;
+                while (true) {
+                    curentNode = curentNode.next;
+                    if (index == firstCount) {
+                        Node<E> next = curentNode.getNext();
+                        Node<E> prev = curentNode.getPrev();
+                        prev.setNext(next);
+                        next.setPrev(prev);
+                        break;
 
+                    } else {
+                        firstCount++;
+                    }
+                }
+
+            } else if (size / 2 > index) {
+                int endCount = size;
+                Node<E> curentNode = last;
+
+                while (true) {
+
+                    curentNode = curentNode.next;
+                    if (index == endCount) {
+                        Node<E> next = curentNode.getNext();
+                        Node<E> prev = curentNode.getPrev();
+                        prev.setNext(next);
+                        next.setPrev(prev);
+                        break;
+
+                    } else {
+                        endCount--;
+                    }
+                }
+            }
+            size--;
+            return true;
+
+        } else {
+
+            return false;
+        }
+    }
+}
