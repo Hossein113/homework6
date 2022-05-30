@@ -10,7 +10,7 @@ public class MainApplication {
 
 
         System.out.println("0k");
-        List<Integer> originalList = createArrayListWithScanner();
+        List<Integer> originalList = createArrayList();
         printlist(originalList);
 
         List<Integer> copyArrayList = new ArrayList<>(originalList);
