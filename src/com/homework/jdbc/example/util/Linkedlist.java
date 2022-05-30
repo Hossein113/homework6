@@ -31,5 +31,17 @@ public class Linkedlist<E> {
         return true;
     }
 
+    public boolean addToEnd(E e) {
+        Node<E> newNode = new Node<>(last, e, null);
+        if (size == 0) {
+            first = newNode;
+        } else {
+            last.setNext(newNode);
+        }
+        last = newNode;
+        size++;
+        return true;
+    }
+
 }
 
