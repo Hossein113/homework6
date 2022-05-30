@@ -2,9 +2,9 @@ package com.homework.jdbc.example.util;
 
 public class Node<E> {
 
-    E item;
-    Node<E> next;
-    Node<E> prev;
+    private E item;
+    private Node<E> next;
+    private Node<E> prev;
 
     Node(Node<E> prev, E element, Node<E> next) {
         this.item = element;
@@ -28,5 +28,7 @@ public class Node<E> {
         this.prev = prev;
     }
 
-
+    public E getItem() {
+        return item;
+    }
 }
