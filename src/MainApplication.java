@@ -33,18 +33,16 @@ public class MainApplication {
     private static List<Integer> createArrayListWithScanner() {
         List<Integer> list = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
-        boolean flag = true;
-        while (flag) {
-            System.out.println("enter number :");
-            int number = scanner.nextInt();
-            list.add(number);
-            System.out.println(" press any key for countinu :");
-            System.out.println(" prees key for End : E");
-            String result = scanner.next();
-            if (result.equalsIgnoreCase("e")) {
-                flag = false;
-            }
+        while (true) {
+            try {
+                System.out.println("enter number :");
+                int number = scanner.nextInt();
+                list.add(number);
 
+                System.out.println(" End : E");
+            } catch (Exception exception) {
+                break;
+            }
         }
         int number = list.size();
         if (list.size() % 2 != 0) {
