@@ -15,5 +15,21 @@ public class Linkedlist<E> {
         return size;
     }
 
+
+    public boolean addToFirst(E e) {
+
+        Node<E> newNode = new Node<>(null, e, first);
+        if (size == 0) {
+            last = newNode;
+
+        } else {
+
+            first.setPrev(newNode);
+        }
+        first = newNode;
+        size++;
+        return true;
+    }
+
 }
 
