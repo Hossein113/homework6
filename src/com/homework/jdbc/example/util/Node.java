@@ -31,4 +31,11 @@ public class Node<E> {
     public E getItem() {
         return item;
     }
+
+
+    @Override
+    public String toString() {
+        return
+                "" + item;
+    }
 }
