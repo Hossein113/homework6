@@ -1,17 +1,15 @@
-import com.homework.jdbc.example.util.Linkedlist;
-
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class MainApplication {
 
 
     public static void main(String[] args) {
 
-        Linkedlist linkedlist = new Linkedlist();
 
         System.out.println("0k");
-        List<Integer> originalList = createArrayList();
+        List<Integer> originalList = createArrayListWithScanner();
         printlist(originalList);
 
         List<Integer> copyArrayList = new ArrayList<>(originalList);
@@ -30,6 +28,30 @@ public class MainApplication {
 //        printlist(originalList);
 //        printlist(byRemove);
 
+    }
+
+    private static List<Integer> createArrayListWithScanner() {
+        List<Integer> list = new ArrayList<>();
+        Scanner scanner = new Scanner(System.in);
+        boolean flag = true;
+        while (flag) {
+            System.out.println("enter number :");
+            int number = scanner.nextInt();
+            list.add(number);
+            System.out.println(" press any key for countinu :");
+            System.out.println(" prees key for End : E");
+            String result = scanner.next();
+            if (result.equalsIgnoreCase("e")) {
+                flag = false;
+            }
+
+        }
+        int number = list.size();
+        if (list.size() % 2 != 0) {
+            list.remove((number - 1));
+
+        }
+        return list;
     }
 
     private static List<Integer> createArrayList() {
