@@ -10,5 +10,10 @@ public class Linkedlist<E> {
 
     private Node<E> last;
 
+
+    public int size() {
+        return size;
+    }
+
 }
 
