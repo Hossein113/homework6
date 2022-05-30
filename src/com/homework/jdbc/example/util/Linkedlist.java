@@ -89,4 +89,12 @@ public class Linkedlist<E> {
             return false;
         }
     }
+
+
+    public boolean isEmpity() {
+        if (size == 0) {
+
+        }
+        return size == 0;
+    }
 }
