@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
@@ -40,7 +41,7 @@ public class MainApplication {
                 list.add(number);
 
                 System.out.println(" End : E");
-            } catch (Exception exception) {
+            } catch (InputMismatchException exception) {
                 break;
             }
         }
