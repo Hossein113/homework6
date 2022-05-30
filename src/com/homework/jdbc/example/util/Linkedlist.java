@@ -49,7 +49,7 @@ public class Linkedlist<E> {
                 int firstCount = 0;
                 Node<E> curentNode = first;
                 while (true) {
-                    curentNode = curentNode.next;
+                    curentNode = curentNode.getNext();
                     if (index == firstCount) {
                         Node<E> next = curentNode.getNext();
                         Node<E> prev = curentNode.getPrev();
@@ -68,7 +68,7 @@ public class Linkedlist<E> {
 
                 while (true) {
 
-                    curentNode = curentNode.next;
+                    curentNode = curentNode.getNext();
                     if (index == endCount) {
                         Node<E> next = curentNode.getNext();
                         Node<E> prev = curentNode.getPrev();
@@ -92,9 +92,27 @@ public class Linkedlist<E> {
 
 
     public boolean isEmpity() {
-        if (size == 0) {
 
-        }
         return size == 0;
+    }
+
+    public boolean exist(E e) {
+
+        if (size != 0) {
+            Node<E> curentNode = first;
+            for (int i = 0; i < size; i++) {
+
+
+                if (curentNode.getItem().equals(e)) {
+                    return true;
+
+
+                } else {
+                    curentNode = curentNode.getNext();
+                }
+            }
+        }
+
+        return false;
     }
 }
